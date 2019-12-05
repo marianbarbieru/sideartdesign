@@ -1,0 +1,32 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  #home-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    -webkit-text-stroke: 1px black;
+  }
+}
+
+@media screen and(max-width:630px) {
+  -webkit-overflo
+  .home {
+    margin: 0;
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+}

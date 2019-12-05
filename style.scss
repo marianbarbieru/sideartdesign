@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+$margin: 0 5%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+}
+body {
+  background-color: rgba(232, 240, 148, 0.35);
+  color: white;
+  font-family: Poppins, sans-serif;
+}
+
+h1 {
+  color: inherit;
+}
+.navbar {
+  background-color: #6d6c62;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  .brand {
+    margin-left: 5%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+  }
+  .nav-links {
+    // display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+    width: 40%;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 1rem;
+        }
+        a:hover {
+          color: red;
+          font-weight: bold;
+        }
+      }
+    }
+    .burger {
+      display: none;
+      div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 3px 0;
+      }
+    }
+  }
+}
+.footer {
+  background-color: #6d6c62;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  height: 8vh;
+  ul {
+    height: 100%;
+    margin: $margin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      list-style: none;
+
+      a img {
+        display: flex;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width:630px) {
+  .navbar {
+    position: relative;
+    .brand a {
+      font-size: 0.72rem;
+    }
+    .nav-links {
+      width: 15%;
+      ul {
+        position: absolute;
+        top: 12vh;
+        right: 5%;
+        display: flex;
+        flex-direction: column;
+        background-color: #6d6c62;
+        border-radius: 1.5rem;
+        opacity: 0;
+        pointer-events: none;
+        li {
+          padding: 1rem;
+        }
+        .nav-open {
+          opacity: 1;
+          pointer-events: initial;
+        }
+      }
+      .burger {
+        display: block;
+        width: 25px;
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    }
+  }
+}
+section {
+  height: 82vh;
+  margin: 0 5%;
+}
